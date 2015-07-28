@@ -1,0 +1,6 @@
+<% d = drafts.collect do |d|
+    { path: d.path, title: d.title }
+  end
+%><%= 
+  {drafts: d }.to_json
+%>

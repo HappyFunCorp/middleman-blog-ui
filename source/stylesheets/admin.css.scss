@@ -1,0 +1,55 @@
+// @import url(http://fonts.googleapis.com/css?family=Inconsolata);
+// @import url(http://fonts.googleapis.com/css?family=Lato:900,300italic);
+// @import url(http://fonts.googleapis.com/css?family=Lustria);
+
+// $font-family-base: 'Lustria', Georgia, "Times New Roman", Times, serif;
+// $font-family-monospace:  Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
+// $headings-font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@import "bootstrap";
+
+body {
+  margin-top: $navbar-height + 15px;
+}
+
+.dashboard {
+  @extend .container;
+
+  .maincontent {
+    @extend .col-sm-8;
+  }
+
+  .sidebar {
+    @extend .col-sm-4;
+  }
+}
+
+.editor {
+  @extend .container;
+
+  .editorPane {
+    @extend .col-sm-6;
+  }
+
+  .previewPane {
+    @extend .col-sm-6;
+  }
+
+}
+
+.toolbar {
+  @extend .row;
+  
+  .dataeditor {
+    @extend .col-sm-6;
+  }
+
+  .status {
+    @extend .col-sm-4;
+  }
+
+  .buttons {
+    @extend .col-sm-2;
+    text-align: right;
+  }
+}
