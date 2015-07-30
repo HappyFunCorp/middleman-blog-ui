@@ -1,28 +1,37 @@
 # Middleman::Blog::Ui
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/middleman/blog/ui`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is mean to work with an exitisting middleman site, that uses both middleman-blog and middleman-blog-drafts.
 
-TODO: Delete this and the text above, and describe your gem
+More information on how it works can be found on my blog, at http://willschenk.com/building-a-gui-for-managing-middleman-blogs/
 
 ## Installation
 
-Add this line to your application's Gemfile:
 
-```ruby
-gem 'middleman-blog-ui'
-```
+Given a middleman app with `middleman-blog` and `middleman-blog-drafts` configured:
 
-And then execute:
+1. Add `middleman-blog-ui` in your `Gemfile`.
+2. Add `activate :blog_ui` in `config.rb`
+3. Start `middleman server`
+4. Visit [http://localhost:4567/admin](http://localhost:4567/admin).
 
-    $ bundle
+And now you are living in the fabulous world where you can, from your browser:
 
-Or install it yourself as:
+- Edit existing drafts and posts
+- Create new drafts
+- Publish drafts into posts
+- Run some basic `git` commands.
+- Run `middleman build`
+- Run `middleman deploy`
 
-    $ gem install middleman-blog-ui
+## Next steps
 
-## Usage
+This is mainly a proof of concept, but I'm using it right now to write this post.  The app itself needs
 
-TODO: Write usage instructions here
+1. A decent UI
+2. Support for other static generators other than middleman
+3. A concept of users
+4. Shared drafts
+5. Better error handling
 
 ## Development
 
