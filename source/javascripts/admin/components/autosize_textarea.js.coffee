@@ -14,10 +14,12 @@
     @state.trigger_resize = true
     @setState @state
 
-  # componentWillUpdate: () ->
-  #   console.log "Start", React.findDOMNode( @refs.myInput )
+  componentWillUpdate: () ->
+    @position = React.findDOMNode( @refs.myInput ).selectionStart || @position
+    # console.log "Position", @position
 
   componentDidUpdate: ->
+    # console.log "Setting position", @position
     React.findDOMNode( @refs.myInput ).setSelectionRange( @position, @position )
     if @state.trigger_resize
       @state.trigger_resize = false

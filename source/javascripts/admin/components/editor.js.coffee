@@ -9,7 +9,6 @@
     clearTimeout( @timer ) if( @timer )
     @timer = setTimeout =>
       saveCurrentArticle()
-      @timer = null
     , 2000
 
   render: ->
